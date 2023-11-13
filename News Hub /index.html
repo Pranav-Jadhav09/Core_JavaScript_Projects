@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore the latest and most relevant news from around the world with our intuitive news app. Stay informed and up-to-date on current events, top stories, and trending topics. Download now for a comprehensive news experience"
+    />
+    <meta name="author" content="Pranav Jadhav" />
+    <meta
+      name="keywords"
+      content="news app, latest news, current events, top stories, trending topics, news updates, world news, local news, breaking news, news headlines, news aggregator, news platform, news articles"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (OG) meta tags for social media sharing -->
+    <meta property="og:title" content="News Hub" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://news-hub-app-site.onrender.com" />
+    <meta
+      property="og:image"
+      content="https://www.yourwebsite.com/images/og-image.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Explore the latest and most relevant news from around the world with our intuitive news app. Stay informed and up-to-date on current events, top stories, and trending topics. Download now for a comprehensive news experience"
+    />
+
+    <title>News Hub App</title>
+
+    <!-- === Remix Icon === -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="company-logo"
+          >News <span class="hub">Hub</span>
+        </a>
+
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="ai"
+              onclick="onNavItemClick('ai')"
+            >
+              A.I.
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="esports"
+              onclick="onNavItemClick('esports')"
+            >
+              eSports
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="economy"
+              onclick="onNavItemClick('economy')"
+            >
+              Economy
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            type="text"
+            id="search-text"
+            class="news-input"
+            placeholder="e.g. Science"
+          />
+
+          <button id="search-btn" class="search-btn">Search</button>
+        </div>
+
+        <!-- Ham Icon -->
+        <div class="ham-icon">
+          <i class="ri-menu-3-fill"></i>
+        </div>
+      </div>
+
+      <!-- Mobile navbar -->
+      <div class="mobile-navbar">
+        <ul class="m-flex">
+          <li
+            class="hover-link nav-item"
+            id="ai"
+            onclick="onNavItemClick('ai')"
+          >
+            A.I.
+          </li>
+          <li
+            class="hover-link nav-item"
+            id="esports"
+            onclick="onNavItemClick('esports')"
+          >
+            eSports
+          </li>
+          <li
+            class="hover-link nav-item"
+            id="politics"
+            onclick="onNavItemClick('politics')"
+          >
+            Politics
+          </li>
+          <li
+            class="hover-link nav-item"
+            id="economy"
+            onclick="onNavItemClick('economy')"
+          >
+            Economy
+          </li>
+        </ul>
+        <div class="search-bar-mb flex">
+          <input
+            type="text"
+            id="mobile-search-text"
+            class="news-input"
+            placeholder="e.g. Science"
+          />
+
+          <button id="mobile-search-btn" class="search-btn">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com.400x200"
+            alt="news-cover-image"
+            id="news-image"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is The Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            itaque possimus at consectetur sed atque placeat optio laboriosam
+            perferendis incidunt! Esse inventore repudiandae labore tenetur
+            dolor vitae quam voluptatum obcaecati?
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- === JavaScript === -->
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

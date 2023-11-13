@@ -1,0 +1,266 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variable CSS */
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  line-height: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* Helper Classes */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1240px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: #f3faff;
+  box-shadow: 0 0 4px #bbd0e2;
+}
+.mobile-navbar {
+  display: none;
+}
+.main-nav {
+  justify-content: space-between;
+  padding-block: 8px;
+  align-items: center;
+}
+.ham-icon {
+  display: none;
+}
+.company-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.hub {
+  background-color: orange;
+  padding: 1px 3px;
+  border-radius: 4px;
+}
+
+/* Nav Links */
+.nav-links ul {
+  gap: 16px;
+}
+.hover-link {
+  cursor: pointer;
+}
+.hover-link:hover {
+  color: var(--accent-color);
+}
+.hover-link:active {
+  color: red;
+}
+
+.nav-item.active {
+  color: var(--secondary-text-color);
+}
+
+/* Search bar & btn */
+.search-bar {
+  height: 32px;
+  gap: 8px;
+}
+.news-input {
+  width: 200px;
+  height: 100%;
+  padding-inline: 12px;
+  border: none;
+  border-radius: 4px;
+  border: 2px solid #bbd0e2;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+.search-btn:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* Main : Parent */
+main {
+  margin-top: 80px;
+  padding-block: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  width: 360px;
+  min-height: 400px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 4px #a3a5a6;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 1px 1px 8px #d4ecff;
+  background-color: #f9fdff;
+  transform: translateY(-2px);
+}
+.card-header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 12px;
+}
+.news-source {
+  margin-block: 12px;
+}
+
+/* Media Queries */
+
+/* Screens smaller than 1130px */
+@media (max-width: 1130px) {
+  .container {
+    max-width: 1100px;
+  }
+  main {
+    margin-top: 60px;
+  }
+  .main-nav {
+    padding: 5px 10px;
+  }
+  .card {
+    width: 350px;
+  }
+}
+
+/* Screens smaller than 745px */
+@media (max-width: 730px) {
+  .container {
+    max-width: 700px;
+  }
+  main {
+    margin-top: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .main-nav {
+    padding: 5px 10px;
+  }
+  .card {
+    width: 340px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    max-width: 670px;
+  }
+  .card {
+    width: 320px;
+  }
+  .main-nav {
+    padding: 5px 10px;
+  }
+  .nav-links,
+  .search-bar {
+    display: none;
+  }
+
+  /* Mobile navigation css */
+  .mobile-navbar {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    margin-top: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .mobile-navbar .search-bar-mb {
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-bar-mb .news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .ham-icon {
+    display: block;
+    margin-top: 5px;
+  }
+  .ham-icon i {
+    color: #000;
+    font-size: 20px;
+    z-index: 100;
+  }
+}
+
+/* Screens smaller than 320px */
+@media (max-width: 330px) {
+  .card {
+    width: 300px;
+  }
+}
